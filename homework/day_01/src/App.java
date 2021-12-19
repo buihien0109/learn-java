@@ -1,5 +1,5 @@
 public class App {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args){
         // Bài 1
         System.out.println("===== Bài 1 =====");
         System.out.println(Calculator.add(3, 4));
