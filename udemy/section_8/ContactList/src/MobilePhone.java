@@ -15,7 +15,7 @@ public class MobilePhone {
 
     // Thêm liên hệ mới vào danh bạ
     public boolean addNewContact(Contact contact) {
-        if(findContact(contact.getName()) >=0) {
+        if (findContact(contact.getName()) >= 0) {
             System.out.println("Contact is already on file");
             return false;
         }
@@ -28,8 +28,11 @@ public class MobilePhone {
     // Cập nhật liên hệ thành liên hệ mới
     public boolean updateContact(Contact oldContact, Contact newContact) {
         int foundPosition = findContact(oldContact);
-        if(foundPosition <0) {
-            System.out.println(oldContact.getName() +", was not found.");
+        if (foundPosition < 0) {
+            System.out.println(oldContact.getName() + ", was not found.");
+            return false;
+        } else if (findContact(newContact.getName()) != -1) {
+            System.out.println("Contact with name "  + newContact.getName() + " was ready");
             return false;
         }
 
@@ -41,8 +44,8 @@ public class MobilePhone {
     // Xóa 1 liên hệ
     public boolean removeContact(Contact contact) {
         int foundPosition = findContact(contact);
-        if(foundPosition <0) {
-            System.out.println(contact.getName() +", was not found.");
+        if (foundPosition < 0) {
+            System.out.println(contact.getName() + ", was not found.");
             return false;
         }
         this.myContacts.remove(foundPosition);
@@ -57,9 +60,9 @@ public class MobilePhone {
 
     // Tìm hiến liên hệ theo name
     private int findContact(String contactName) {
-        for(int i=0; i<this.myContacts.size(); i++) {
+        for (int i = 0; i < this.myContacts.size(); i++) {
             Contact contact = this.myContacts.get(i);
-            if(contact.getName().equals(contactName)) {
+            if (contact.getName().equals(contactName)) {
                 return i;
             }
         }
@@ -68,7 +71,7 @@ public class MobilePhone {
 
     // Tìm kiếm liên hệ và trả về name của liên hệ đó
     public String queryContact(Contact contact) {
-        if(findContact(contact) >=0) {
+        if (findContact(contact) >= 0) {
             return contact.getName();
         }
         return null;
@@ -77,7 +80,7 @@ public class MobilePhone {
     // Tìm kiếm liên hệ và trả về về liên hệ đó
     public Contact queryContact(String name) {
         int position = findContact(name);
-        if(position >=0) {
+        if (position >= 0) {
             return this.myContacts.get(position);
         }
 
@@ -87,31 +90,12 @@ public class MobilePhone {
     // In thông tin của tất cả liên hệ trong danh bạ
     public void printContacts() {
         System.out.println("Contact List");
-        for(int i=0; i<this.myContacts.size(); i++) {
-            System.out.println((i+1) + "." +
-                        this.myContacts.get(i).getName() + " -> " +
-                        this.myContacts.get(i).getPhoneNumber());
+        for (int i = 0; i < this.myContacts.size(); i++) {
+            System.out.println((i + 1) + "." +
+                    this.myContacts.get(i).getName() + " -> " +
+                    this.myContacts.get(i).getPhoneNumber());
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
