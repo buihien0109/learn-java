@@ -4,7 +4,7 @@ Generics trong Java cho phép chúng ta tạo ra single class, interface, method
 
 ### Java Generics Class
 
-1 class mà có thể sử dụng với bất kỳ kiểu dữ liệu nào thì class đó được gọi clas Generics class
+1 class mà có thể sử dụng với bất kỳ kiểu dữ liệu nào thì class đó được gọi `Generics class`
 
 Ví dụ :
 
@@ -107,7 +107,7 @@ Tuy nhiên ở đây chúng ta lại tạo object của `GenericsClass` ở dạ
 
 ### Ưu điểm khi sử dụng generics
 
-1. Khả năng tái sử dụng code
+**1. Khả năng tái sử dụng code**
 
 Với sự giúp đỡ của generic trong Java, code mà chúng ta viết có thể làm việc với các kiểu dữ liệu khác nhau
 
@@ -117,7 +117,7 @@ public <T> void genericsMethod(T data) {...}
 
 Chúng ta tạo generics method, method này được sử dụng với các data như : string data, number data, ...
 
-2. Compile-time Type Checking (Kiểm tra trong quá trình Compile-time)
+**2. Compile-time Type Checking (Kiểm tra trong quá trình Compile-time)**
 
 ` type parameter` của generic cung cấp thông tin về loại dữ liệu được sử dụng trong code 
 
@@ -128,7 +128,7 @@ GenericsClass<Integer> list = new GenericsClass<>();
 
 `GenericsClass` chỉ làm việc với `Integer`
 
-3. Được sử dụng với Collections
+**3. Được sử dụng với Collections**
 
 Collections framework sử dụng ý tưởng của generics
 
