@@ -27,7 +27,7 @@ public class Main {
 
         System.out.println("Nhập vào số b : ");
         double b = scanner.nextDouble();
-        
+
         System.out.println("Nhập vào số c : ");
         double c = scanner.nextDouble();
 
