@@ -4,6 +4,14 @@ public class StringsExercise {
     private static Scanner scanner = new Scanner(System.in);
     private static String[] strings;
 
+    // Chạy chương trình
+    public static void run() {
+        input();
+        print();
+        countWord("Java");
+        printPositionWord();
+    }
+
     // Nhập vào số lượng phần tử
     // Nhập vào từng phần tử của mảng
     public static void input() {
