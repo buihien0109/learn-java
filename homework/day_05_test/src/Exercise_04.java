@@ -1,4 +1,5 @@
 public class Exercise_04 {
+    // Kiểm tra số nguyên tố
     private static boolean isPrimeNumber(int n) {
         if (n < 2) {
             return false;
@@ -12,6 +13,7 @@ public class Exercise_04 {
         return true;
     }
 
+    // Lấy ra danh sách n số nguyên tố đầu tiên
     private static void printNPrimeNumberFirst(int n) {
         int i = 2;
         int countOfNumber = 0;
@@ -27,6 +29,7 @@ public class Exercise_04 {
         }
     }
 
+    // In ra các số nguyên tố nhỏ hơn N
     private static void printPrimeNumberLessN(int n) {
         for (int i = 0; i < n; i++) {
             if (isPrimeNumber(i)) {

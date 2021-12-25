@@ -1,11 +1,13 @@
 public class Exercise_02 {
     private static String str = "You only live once, but if you do it right, once is enough";
 
+    // Đếm số từ có trong chuỗi
     private static void countWords() {
         String[] arr = str.split(" ");
         System.out.println("1. Số từ trong chuỗi : " + arr.length);
     }
 
+    // Đếm và in ra vị trí của ký tự bất kỳ
     private static void countAndPrintPositionCharacter(char ch) {
         System.out.println("2. Đếm và in ra index của các ký tự " + ch);
         int count = 0;

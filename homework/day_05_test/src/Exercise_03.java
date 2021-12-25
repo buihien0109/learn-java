@@ -1,6 +1,7 @@
 import java.util.Random;
 
 public class Exercise_03 {
+    // Kiểm tra số nguyên tố
     private static boolean isPrimeNumber(int n) {
         if (n < 2) {
             return false;
@@ -14,6 +15,7 @@ public class Exercise_03 {
         return true;
     }
 
+    // Ramdom 1 số và kiểm tra số đó có phải là số nguyên tố hay không
     private static void randomAndCheckPrimeNumber() {
         Random random = new Random();
         int number = random.nextInt(20);

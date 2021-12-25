@@ -6,6 +6,8 @@ public class Exercise_06 {
     private static int rows;
     private static int cols;
 
+    // Nhập vào số hàng và số cột của mảng
+    // Nhập nội dung cho mảng
     private static void input() {
         System.out.println("Nhập vào số hàng (rows) : ");
         rows = Integer.parseInt(scanner.nextLine());
@@ -24,6 +26,7 @@ public class Exercise_06 {
         }
     }
 
+    // In ra các giá trị của mảng
     private static void print() {
         System.out.println("2. In ra phần tử của mảng");
         for (int i = 0; i < rows; i++) {
@@ -33,6 +36,9 @@ public class Exercise_06 {
         }
     }
 
+    // Kiểm tra xem mảng có đường chéo chính hay không
+    // Nếu có => in ra các phần tử nằm trên đường chéo chính
+    // Nếu không => thông báo
     private static void printMainDiagonal() {
         System.out.println("3. Liệt kê các phần tử nằm trên đường chéo chính");
         if (rows != cols) {

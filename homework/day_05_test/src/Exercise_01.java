@@ -1,4 +1,5 @@
 public class Exercise_01 {
+    // In ra hình vuông
     private static void printSquare(int side) {
         for (int i = 0; i < side; i++) {
             for (int j = 0; j < side; j++) {
@@ -8,6 +9,7 @@ public class Exercise_01 {
         }
     }
 
+    // In ra hình tam giác
     private static void printTriangle(int side) {
         for (int i = 0; i < side; i++) {
             for (int j = 0; j < side; j++) {
@@ -19,6 +21,7 @@ public class Exercise_01 {
         }
     }
 
+    // In ra hình tam giác
     private static void printTriangle02(int side) {
         for (int i = 0; i < side; i++) {
             System.out.print(" ".repeat(side - i - 1));
