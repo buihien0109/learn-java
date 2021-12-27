@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Random;
 
 public class Team {
@@ -13,12 +14,11 @@ public class Team {
     }
 
     public void addPlayer(Player newPlayer) {
-        if (players.contains(newPlayer)) {
-            System.out.println("Cầu thủ đã có trong đội");
-            return;
-        }
-
         for (Player player : players) {
+            if (player.equals(newPlayer)) {
+                System.out.println("Cầu thủ đã có trong đội");
+                return;
+            }
             if (player.getNumber() == newPlayer.getNumber()) {
                 System.out.println("Cầu thủ không được trùng số áo");
                 return;

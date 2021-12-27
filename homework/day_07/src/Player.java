@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Player {
     private int number;
     private String fullName;
@@ -28,5 +30,13 @@ public class Player {
                 ", fullName='" + fullName + '\'' +
                 ", position=" + position +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Player player = (Player) o;
+        return number == player.number && Objects.equals(fullName, player.fullName) && position == player.position;
     }
 }
