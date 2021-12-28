@@ -10,18 +10,15 @@ public class Main {
         boolean isQuit = false;
         int option = 0;
 
-        // Hiển thị menu
-        printMenu();
-
         // Nhập các lựa chọn -> chạy chương trình tương ứng
         while (!isQuit) {
+            // Hiển thị menu
+            printMenu();
+
             System.out.println("Nhập lựa chọn : ");
             option = Integer.parseInt(scanner.nextLine());
 
             switch (option) {
-                case 0:
-                    printMenu();
-                    break;
                 case 1:
                     getBooks();
                     break;
@@ -46,7 +43,6 @@ public class Main {
 
     // Hiển thị nội dung của menu
     public static void printMenu() {
-        System.out.println("\t 0 - Hiển thị menu");
         System.out.println("\t 1 - In danh sách toàn bộ sách");
         System.out.println("\t 2 - Lọc sách theo thể loại");
         System.out.println("\t 3 - Đếm sách theo thể loại");

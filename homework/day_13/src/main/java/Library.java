@@ -12,7 +12,7 @@ public class Library {
     private ArrayList<Book> books;
 
     public Library() {
-        books = loadBooks();
+        books = loadBooks("book.json");
         // Đọc file và khởi tạo thuộc tính cho đối tượng Library
     }
 
@@ -20,10 +20,10 @@ public class Library {
         return books;
     }
 
-    public ArrayList<Book> loadBooks() {
+    public ArrayList<Book> loadBooks(String fileName) {
         try {
             Gson gson = new Gson();
-            FileReader fileReader = new FileReader("book.json");
+            FileReader fileReader = new FileReader(fileName);
             Type type = new TypeToken<ArrayList<Book>>() {}.getType();
 
             books = gson.fromJson(fileReader, type);
